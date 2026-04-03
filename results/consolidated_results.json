@@ -1,0 +1,484 @@
+[
+  {
+    "harness": "V1 \u2014 Axiom Independence Logic",
+    "script": "harness_v1.py",
+    "exit_code": 0,
+    "elapsed_seconds": 0.03,
+    "results": {
+      "harness": "V1 Axiom Independence Diagnostic",
+      "run_date": "2026-04-03T23:05:14.819233+00:00",
+      "overall_passed": true,
+      "tests": [
+        {
+          "test": "Test 1: File Backup and Restore",
+          "passed": true,
+          "checks": [
+            "  [PASS] Backup file created",
+            "  [PASS] File was modified",
+            "  [PASS] Restored content matches original"
+          ]
+        },
+        {
+          "test": "Test 2: Axiom Comment-Out Pattern",
+          "passed": true,
+          "checks": [
+            "  [PASS] Single-line block start correct",
+            "  [PASS] Single-line block end correct",
+            "  [PASS] Single-line correctly commented out",
+            "  [PASS] Single-line restore matches original",
+            "  [PASS] Multi-line block start correct",
+            "  [PASS] Multi-line block end correct",
+            "  [PASS] Multi-line line 1 commented",
+            "  [PASS] Multi-line line 2 commented",
+            "  [PASS] Multi-line restore matches original"
+          ]
+        },
+        {
+          "test": "Test 3: Error Classification Logic",
+          "passed": true,
+          "checks": [
+            "  [PASS] Clean build: 0 errors extracted",
+            "  [PASS] Clean build: classified SILENT",
+            "  [PASS] Broken build: 3 errors extracted",
+            "  [PASS] Broken build: classified BREAK"
+          ]
+        },
+        {
+          "test": "Test 4: Error Extraction Regex",
+          "passed": true,
+          "checks": [
+            "  [PASS] Extracted exactly 2 errors",
+            "  [PASS] Identified 2 error files",
+            "  [PASS] Defs.lean in error files",
+            "  [PASS] Simulation.lean in error files",
+            "  [PASS] First error mentions test_axiom",
+            "  [PASS] Second error mentions type mismatch"
+          ]
+        },
+        {
+          "test": "Test 5: D1 Scenario - Dead Axiom Detection",
+          "passed": true,
+          "checks": [
+            "  [PASS] Dead axiom: 0 errors",
+            "  [PASS] Dead axiom: classified SILENT",
+            "  [PASS] SILENT = SEV-2 finding (axiom not load-bearing)",
+            "  [PASS] Live axiom: classified BREAK",
+            "  [PASS] BREAK confirms axiom is necessary"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "harness": "V2 \u2014 Witness Trace Encoding",
+    "script": "harness_v2.py",
+    "exit_code": 0,
+    "elapsed_seconds": 0.02,
+    "results": {
+      "harness": "harness_v2.py",
+      "diagnostics": [
+        {
+          "diagnostic": "D0 \u2014 Perfect Control",
+          "all_pass": true,
+          "checks": [
+            {
+              "label": "All decode matches",
+              "passed": true,
+              "detail": ""
+            },
+            {
+              "label": "All round-trip ok",
+              "passed": true,
+              "detail": ""
+            },
+            {
+              "label": "All AES genome matches expected",
+              "passed": true,
+              "detail": ""
+            },
+            {
+              "label": "Trace halted",
+              "passed": true,
+              "detail": ""
+            },
+            {
+              "label": "Trace length = 3 (expect 3-4)",
+              "passed": true,
+              "detail": ""
+            }
+          ]
+        },
+        {
+          "diagnostic": "D2 \u2014 Broken Encoding (Non-Injective)",
+          "all_pass": true,
+          "checks": [
+            {
+              "label": "TagEncoding rejects non-injective map",
+              "passed": true,
+              "detail": ""
+            },
+            {
+              "label": "Bit-flip detected (AES returned None)",
+              "passed": true,
+              "detail": ""
+            }
+          ]
+        },
+        {
+          "diagnostic": "D2b \u2014 Lossy Encoding (dropped bit)",
+          "all_pass": true,
+          "checks": [
+            {
+              "label": "Dropped bit detected (genome mismatch)",
+              "passed": true,
+              "detail": "head_sym=a"
+            }
+          ]
+        }
+      ],
+      "overall_pass": true
+    }
+  },
+  {
+    "harness": "V8 \u2014 Simulation Concordance",
+    "script": "harness_v8.py",
+    "exit_code": 0,
+    "elapsed_seconds": 0.02,
+    "results": {
+      "harness": "harness_v8",
+      "total_checks": 34,
+      "total_correct": 34,
+      "all_pass": true,
+      "scenarios": [
+        {
+          "scenario": "D0_sim1_perfect",
+          "checks": [
+            {
+              "name": "sim1_t1_bounded_at_dup0",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "unique_genomes=100 (expect < 5000)"
+            },
+            {
+              "name": "sim1_t2_expansion_at_dup01",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "dup0.1=2000 vs dup0.0=100 (need 5x)"
+            },
+            {
+              "name": "sim1_t3_length_growth",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "max_len(0.1)=200 vs max_len(0.0)=20 (need 2x)"
+            },
+            {
+              "name": "sim1_t4_phase_transition",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "max_len(0.1)=200 vs max_len(0.05)=30 (need 2x)"
+            },
+            {
+              "name": "sim1_t5_entropy_peak",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "H(0.5)=3.00 vs H(0.0)=0.50"
+            }
+          ],
+          "meta_pass": true
+        },
+        {
+          "scenario": "D0_sim2_perfect",
+          "checks": [
+            {
+              "name": "sim2_t1_pareto_tail",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "alpha_mean=2.00 (expect > 1.0)"
+            },
+            {
+              "name": "sim2_t2_alpha_finite",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "alpha_mean=2.00 (expect < 10.0)"
+            },
+            {
+              "name": "sim2_t3_consistent",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "alpha_std=0.30 (expect < 2.0)"
+            },
+            {
+              "name": "sim2_t4_heavy_tailed",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "max_size_mean=50.0 (expect > 5)"
+            }
+          ],
+          "meta_pass": true
+        },
+        {
+          "scenario": "D0_sim3_perfect",
+          "checks": [
+            {
+              "name": "sim3_t1_flat_length_preserved",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "final_len=20 (expect 20)"
+            },
+            {
+              "name": "sim3_t2_indel_lt_recursive_length",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Tier2=50 vs Tier3=200"
+            },
+            {
+              "name": "sim3_t3_recursive_max_gt_flat",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Tier3_max=600 vs Tier1_max=20"
+            },
+            {
+              "name": "sim3_t4_flat_statespace_bounded",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Tier1_unique=500 < 1048576"
+            },
+            {
+              "name": "sim3_t5_recursive_gt_flat_statespace",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Tier3=8000 vs Tier1=500"
+            },
+            {
+              "name": "sim3_t6_growth_rate_ordering",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Flat=0.0100 <= Indel=0.1000 <= Recursive=0.5000"
+            },
+            {
+              "name": "sim3_t7_recursive_heavy_tailed",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "heavy-tailed count=40 (need > 15)"
+            },
+            {
+              "name": "sim3_t8_strict_separation",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "unique: 8000 > 750 and max_len: 600 > 40"
+            }
+          ],
+          "meta_pass": true
+        },
+        {
+          "scenario": "D3_sim1_no_phase_transition",
+          "checks": [
+            {
+              "name": "sim1_t1_bounded_at_dup0",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "unique_genomes=100 (expect < 5000)"
+            },
+            {
+              "name": "sim1_t2_expansion_at_dup01",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "dup0.1=100 vs dup0.0=100 (need 5x)"
+            },
+            {
+              "name": "sim1_t3_length_growth",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "max_len(0.1)=20 vs max_len(0.0)=20 (need 2x)"
+            },
+            {
+              "name": "sim1_t4_phase_transition",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "max_len(0.1)=20 vs max_len(0.05)=20 (need 2x)"
+            },
+            {
+              "name": "sim1_t5_entropy_peak",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "H(0.5)=1.00 vs H(0.0)=0.50"
+            }
+          ],
+          "meta_pass": true
+        },
+        {
+          "scenario": "D4_sim2_exponential",
+          "checks": [
+            {
+              "name": "sim2_t1_pareto_tail",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "alpha_mean=0.50 (expect > 1.0)"
+            },
+            {
+              "name": "sim2_t2_alpha_finite",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "alpha_mean=0.50 (expect < 10.0)"
+            },
+            {
+              "name": "sim2_t3_consistent",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "alpha_std=0.30 (expect < 2.0)"
+            },
+            {
+              "name": "sim2_t4_heavy_tailed",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "max_size_mean=50.0 (expect > 5)"
+            }
+          ],
+          "meta_pass": true
+        },
+        {
+          "scenario": "D5_sim3_no_separation",
+          "checks": [
+            {
+              "name": "sim3_t1_flat_length_preserved",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "final_len=20 (expect 20)"
+            },
+            {
+              "name": "sim3_t2_indel_lt_recursive_length",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "Tier2=20 vs Tier3=20"
+            },
+            {
+              "name": "sim3_t3_recursive_max_gt_flat",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "Tier3_max=20 vs Tier1_max=20"
+            },
+            {
+              "name": "sim3_t4_flat_statespace_bounded",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Tier1_unique=500 < 1048576"
+            },
+            {
+              "name": "sim3_t5_recursive_gt_flat_statespace",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "Tier3=500 vs Tier1=500"
+            },
+            {
+              "name": "sim3_t6_growth_rate_ordering",
+              "concordance_result": "PASS",
+              "expected": "PASS",
+              "diagnostic_ok": true,
+              "detail": "Flat=0.0100 <= Indel=0.0100 <= Recursive=0.0100"
+            },
+            {
+              "name": "sim3_t7_recursive_heavy_tailed",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "heavy-tailed count=0 (need > 15)"
+            },
+            {
+              "name": "sim3_t8_strict_separation",
+              "concordance_result": "FAIL",
+              "expected": "FAIL",
+              "diagnostic_ok": true,
+              "detail": "unique: 500 > 750 and max_len: 20 > 40"
+            }
+          ],
+          "meta_pass": true
+        }
+      ]
+    }
+  },
+  {
+    "harness": "V10 \u2014 Empirical Predictions",
+    "script": "harness_v10.py",
+    "exit_code": 0,
+    "elapsed_seconds": 0.54,
+    "results": {
+      "harness": "V10 Diagnostic Harness",
+      "total_pass": 8,
+      "total_tests": 8,
+      "all_pass": true,
+      "diagnostics": [
+        {
+          "name": "D0-Pred1  Power-law recovery (alpha=2.0)",
+          "passed": true,
+          "detail": "alpha_est=1.818, in_range=True, pl_preferred=True, R=3926.28"
+        },
+        {
+          "name": "D0-Pred2  Drake rule (K~0.003)",
+          "passed": true,
+          "detail": "median_K=0.00300, CV=0.0116, all_below_Eigen=True"
+        },
+        {
+          "name": "D0-Pred3  Landauer margin (~50x)",
+          "passed": true,
+          "detail": "total_kT=70.0, landauer_kT=1.3863, margin=50.5x"
+        },
+        {
+          "name": "D0-Pred4  Linear indels",
+          "passed": true,
+          "detail": "delta_BIC=70.358, linear_preferred=True"
+        },
+        {
+          "name": "D6  Wrong alpha (exponential data)",
+          "passed": true,
+          "detail": "alpha_est=2.061, outside_range=False, R=-159.14, exp_preferred=True"
+        },
+        {
+          "name": "D7  Drake violation (scattered K)",
+          "passed": true,
+          "detail": "CV=1.8603, K_values=[0.0001, 0.5, 0.001, 10.0, 0.1]"
+        },
+        {
+          "name": "D8  Landauer violation (cost < minimum)",
+          "passed": true,
+          "detail": "fake_cost=0.5 kT/bp, landauer_min=1.3863 kT/bp, margin=0.361"
+        },
+        {
+          "name": "D9  Nonlinear indels (quadratic data)",
+          "passed": true,
+          "detail": "delta_BIC=-227.384, linear_preferred=False"
+        }
+      ]
+    }
+  }
+]

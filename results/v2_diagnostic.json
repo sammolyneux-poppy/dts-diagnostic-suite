@@ -1,0 +1,64 @@
+{
+  "harness": "harness_v2.py",
+  "diagnostics": [
+    {
+      "diagnostic": "D0 \u2014 Perfect Control",
+      "all_pass": true,
+      "checks": [
+        {
+          "label": "All decode matches",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "label": "All round-trip ok",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "label": "All AES genome matches expected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "label": "Trace halted",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "label": "Trace length = 3 (expect 3-4)",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "diagnostic": "D2 \u2014 Broken Encoding (Non-Injective)",
+      "all_pass": true,
+      "checks": [
+        {
+          "label": "TagEncoding rejects non-injective map",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "label": "Bit-flip detected (AES returned None)",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "diagnostic": "D2b \u2014 Lossy Encoding (dropped bit)",
+      "all_pass": true,
+      "checks": [
+        {
+          "label": "Dropped bit detected (genome mismatch)",
+          "passed": true,
+          "detail": "head_sym=a"
+        }
+      ]
+    }
+  ],
+  "overall_pass": true
+}

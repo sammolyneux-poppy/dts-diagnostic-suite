@@ -1,0 +1,282 @@
+{
+  "harness": "harness_v8",
+  "total_checks": 34,
+  "total_correct": 34,
+  "all_pass": true,
+  "scenarios": [
+    {
+      "scenario": "D0_sim1_perfect",
+      "checks": [
+        {
+          "name": "sim1_t1_bounded_at_dup0",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "unique_genomes=100 (expect < 5000)"
+        },
+        {
+          "name": "sim1_t2_expansion_at_dup01",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "dup0.1=2000 vs dup0.0=100 (need 5x)"
+        },
+        {
+          "name": "sim1_t3_length_growth",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "max_len(0.1)=200 vs max_len(0.0)=20 (need 2x)"
+        },
+        {
+          "name": "sim1_t4_phase_transition",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "max_len(0.1)=200 vs max_len(0.05)=30 (need 2x)"
+        },
+        {
+          "name": "sim1_t5_entropy_peak",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "H(0.5)=3.00 vs H(0.0)=0.50"
+        }
+      ],
+      "meta_pass": true
+    },
+    {
+      "scenario": "D0_sim2_perfect",
+      "checks": [
+        {
+          "name": "sim2_t1_pareto_tail",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "alpha_mean=2.00 (expect > 1.0)"
+        },
+        {
+          "name": "sim2_t2_alpha_finite",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "alpha_mean=2.00 (expect < 10.0)"
+        },
+        {
+          "name": "sim2_t3_consistent",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "alpha_std=0.30 (expect < 2.0)"
+        },
+        {
+          "name": "sim2_t4_heavy_tailed",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "max_size_mean=50.0 (expect > 5)"
+        }
+      ],
+      "meta_pass": true
+    },
+    {
+      "scenario": "D0_sim3_perfect",
+      "checks": [
+        {
+          "name": "sim3_t1_flat_length_preserved",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "final_len=20 (expect 20)"
+        },
+        {
+          "name": "sim3_t2_indel_lt_recursive_length",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Tier2=50 vs Tier3=200"
+        },
+        {
+          "name": "sim3_t3_recursive_max_gt_flat",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Tier3_max=600 vs Tier1_max=20"
+        },
+        {
+          "name": "sim3_t4_flat_statespace_bounded",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Tier1_unique=500 < 1048576"
+        },
+        {
+          "name": "sim3_t5_recursive_gt_flat_statespace",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Tier3=8000 vs Tier1=500"
+        },
+        {
+          "name": "sim3_t6_growth_rate_ordering",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Flat=0.0100 <= Indel=0.1000 <= Recursive=0.5000"
+        },
+        {
+          "name": "sim3_t7_recursive_heavy_tailed",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "heavy-tailed count=40 (need > 15)"
+        },
+        {
+          "name": "sim3_t8_strict_separation",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "unique: 8000 > 750 and max_len: 600 > 40"
+        }
+      ],
+      "meta_pass": true
+    },
+    {
+      "scenario": "D3_sim1_no_phase_transition",
+      "checks": [
+        {
+          "name": "sim1_t1_bounded_at_dup0",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "unique_genomes=100 (expect < 5000)"
+        },
+        {
+          "name": "sim1_t2_expansion_at_dup01",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "dup0.1=100 vs dup0.0=100 (need 5x)"
+        },
+        {
+          "name": "sim1_t3_length_growth",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "max_len(0.1)=20 vs max_len(0.0)=20 (need 2x)"
+        },
+        {
+          "name": "sim1_t4_phase_transition",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "max_len(0.1)=20 vs max_len(0.05)=20 (need 2x)"
+        },
+        {
+          "name": "sim1_t5_entropy_peak",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "H(0.5)=1.00 vs H(0.0)=0.50"
+        }
+      ],
+      "meta_pass": true
+    },
+    {
+      "scenario": "D4_sim2_exponential",
+      "checks": [
+        {
+          "name": "sim2_t1_pareto_tail",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "alpha_mean=0.50 (expect > 1.0)"
+        },
+        {
+          "name": "sim2_t2_alpha_finite",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "alpha_mean=0.50 (expect < 10.0)"
+        },
+        {
+          "name": "sim2_t3_consistent",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "alpha_std=0.30 (expect < 2.0)"
+        },
+        {
+          "name": "sim2_t4_heavy_tailed",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "max_size_mean=50.0 (expect > 5)"
+        }
+      ],
+      "meta_pass": true
+    },
+    {
+      "scenario": "D5_sim3_no_separation",
+      "checks": [
+        {
+          "name": "sim3_t1_flat_length_preserved",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "final_len=20 (expect 20)"
+        },
+        {
+          "name": "sim3_t2_indel_lt_recursive_length",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "Tier2=20 vs Tier3=20"
+        },
+        {
+          "name": "sim3_t3_recursive_max_gt_flat",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "Tier3_max=20 vs Tier1_max=20"
+        },
+        {
+          "name": "sim3_t4_flat_statespace_bounded",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Tier1_unique=500 < 1048576"
+        },
+        {
+          "name": "sim3_t5_recursive_gt_flat_statespace",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "Tier3=500 vs Tier1=500"
+        },
+        {
+          "name": "sim3_t6_growth_rate_ordering",
+          "concordance_result": "PASS",
+          "expected": "PASS",
+          "diagnostic_ok": true,
+          "detail": "Flat=0.0100 <= Indel=0.0100 <= Recursive=0.0100"
+        },
+        {
+          "name": "sim3_t7_recursive_heavy_tailed",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "heavy-tailed count=0 (need > 15)"
+        },
+        {
+          "name": "sim3_t8_strict_separation",
+          "concordance_result": "FAIL",
+          "expected": "FAIL",
+          "diagnostic_ok": true,
+          "detail": "unique: 500 > 750 and max_len: 20 > 40"
+        }
+      ],
+      "meta_pass": true
+    }
+  ]
+}

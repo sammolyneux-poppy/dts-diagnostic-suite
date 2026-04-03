@@ -1,0 +1,48 @@
+{
+  "harness": "V10 Diagnostic Harness",
+  "total_pass": 8,
+  "total_tests": 8,
+  "all_pass": true,
+  "diagnostics": [
+    {
+      "name": "D0-Pred1  Power-law recovery (alpha=2.0)",
+      "passed": true,
+      "detail": "alpha_est=1.818, in_range=True, pl_preferred=True, R=3926.28"
+    },
+    {
+      "name": "D0-Pred2  Drake rule (K~0.003)",
+      "passed": true,
+      "detail": "median_K=0.00300, CV=0.0116, all_below_Eigen=True"
+    },
+    {
+      "name": "D0-Pred3  Landauer margin (~50x)",
+      "passed": true,
+      "detail": "total_kT=70.0, landauer_kT=1.3863, margin=50.5x"
+    },
+    {
+      "name": "D0-Pred4  Linear indels",
+      "passed": true,
+      "detail": "delta_BIC=70.358, linear_preferred=True"
+    },
+    {
+      "name": "D6  Wrong alpha (exponential data)",
+      "passed": true,
+      "detail": "alpha_est=2.061, outside_range=False, R=-159.14, exp_preferred=True"
+    },
+    {
+      "name": "D7  Drake violation (scattered K)",
+      "passed": true,
+      "detail": "CV=1.8603, K_values=[0.0001, 0.5, 0.001, 10.0, 0.1]"
+    },
+    {
+      "name": "D8  Landauer violation (cost < minimum)",
+      "passed": true,
+      "detail": "fake_cost=0.5 kT/bp, landauer_min=1.3863 kT/bp, margin=0.361"
+    },
+    {
+      "name": "D9  Nonlinear indels (quadratic data)",
+      "passed": true,
+      "detail": "delta_BIC=-227.384, linear_preferred=False"
+    }
+  ]
+}
