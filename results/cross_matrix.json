@@ -1,5 +1,6 @@
 {
-  "generated": "2026-04-03T23:46:58.994913+00:00",
+  "generated": "2026-04-04T00:30:06.798301+00:00",
+  "version": 2,
   "total_cells": 192,
   "total_correct": 192,
   "mismatches": 0,
@@ -8,11 +9,11 @@
     "D0": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -32,53 +33,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V4": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V5": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V6": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V7": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V9": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "No defect \u2014 analysis test correctly ignores"
+        "detail": "No defect \u2014 correctly passes"
       }
     },
     "D1": {
       "V1": {
         "result": "FAIL",
-        "detail": "Axiom removal causes NO build failure (SILENT) \u2014 dead axiom SEV-2"
+        "detail": "Axiom removal causes NO failure (SILENT) \u2014 dead axiom"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -98,53 +99,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
-        "result": "DETECT",
-        "detail": "Defect 'dead_axiom' is within V3's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'dead_axiom' not in V3's verified scope"
       },
       "V4": {
-        "result": "DETECT",
-        "detail": "Defect 'dead_axiom' is within V4's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'dead_axiom' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'dead_axiom' outside V5's scope"
+        "detail": "Defect 'dead_axiom' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'dead_axiom' outside V6's scope"
+        "detail": "Defect 'dead_axiom' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'dead_axiom' outside V7's scope"
+        "detail": "Defect 'dead_axiom' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'dead_axiom' outside V9's scope"
+        "detail": "Defect 'dead_axiom' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'dead_axiom' outside V-AL's scope"
+        "detail": "Defect 'dead_axiom' not in V-AL's verified scope"
       }
     },
     "D2": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "FAIL",
-        "detail": "Non-injective encoding detected: multiple states map to same genome"
+        "detail": "Non-injective encoding: multiple states -> same genome"
       },
       "V8-1": {
         "result": "PASS",
@@ -164,53 +165,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V3's scope"
+        "detail": "Defect 'broken_encoding' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V4's scope"
+        "detail": "Defect 'broken_encoding' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V5's scope"
+        "detail": "Defect 'broken_encoding' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V6's scope"
+        "detail": "Defect 'broken_encoding' not in V6's verified scope"
       },
       "V7": {
-        "result": "DETECT",
-        "detail": "Defect 'broken_encoding' is within V7's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'broken_encoding' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V9's scope"
+        "detail": "Defect 'broken_encoding' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'broken_encoding' outside V-AL's scope"
+        "detail": "Defect 'broken_encoding' not in V-AL's verified scope"
       }
     },
     "D3": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "FAIL",
@@ -230,53 +231,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V3's scope"
+        "detail": "Defect 'no_phase_transition' not in V3's verified scope"
       },
       "V4": {
-        "result": "DETECT",
-        "detail": "Defect 'no_phase_transition' is within V4's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'no_phase_transition' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V5's scope"
+        "detail": "Defect 'no_phase_transition' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V6's scope"
+        "detail": "Defect 'no_phase_transition' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V7's scope"
+        "detail": "Defect 'no_phase_transition' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V9's scope"
+        "detail": "Defect 'no_phase_transition' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'no_phase_transition' outside V-AL's scope"
+        "detail": "Defect 'no_phase_transition' not in V-AL's verified scope"
       }
     },
     "D4": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -296,53 +297,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V3's scope"
+        "detail": "Defect 'exponential' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V4's scope"
+        "detail": "Defect 'exponential' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V5's scope"
+        "detail": "Defect 'exponential' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V6's scope"
+        "detail": "Defect 'exponential' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V7's scope"
+        "detail": "Defect 'exponential' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V9's scope"
+        "detail": "Defect 'exponential' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'exponential' outside V-AL's scope"
+        "detail": "Defect 'exponential' not in V-AL's verified scope"
       }
     },
     "D5": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -362,53 +363,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V3's scope"
+        "detail": "Defect 'no_tier_separation' not in V3's verified scope"
       },
       "V4": {
-        "result": "DETECT",
-        "detail": "Defect 'no_tier_separation' is within V4's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'no_tier_separation' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V5's scope"
+        "detail": "Defect 'no_tier_separation' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V6's scope"
+        "detail": "Defect 'no_tier_separation' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V7's scope"
+        "detail": "Defect 'no_tier_separation' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V9's scope"
+        "detail": "Defect 'no_tier_separation' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'no_tier_separation' outside V-AL's scope"
+        "detail": "Defect 'no_tier_separation' not in V-AL's verified scope"
       }
     },
     "D6": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -428,53 +429,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'wrong_alpha' outside V3's scope"
+        "detail": "Defect 'wrong_alpha' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'wrong_alpha' outside V4's scope"
+        "detail": "Defect 'wrong_alpha' not in V4's verified scope"
       },
       "V5": {
-        "result": "DETECT",
-        "detail": "Defect 'wrong_alpha' is within V5's detection scope"
+        "result": "FAIL",
+        "detail": "V5/FC9 analyzes BDIM rate conditions required for Pareto tail"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'wrong_alpha' outside V6's scope"
+        "detail": "Defect 'wrong_alpha' not in V6's verified scope"
       },
       "V7": {
-        "result": "DETECT",
-        "detail": "Defect 'wrong_alpha' is within V7's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'wrong_alpha' not in V7's verified scope"
       },
       "V9": {
-        "result": "DETECT",
-        "detail": "Defect 'wrong_alpha' is within V9's detection scope"
+        "result": "FAIL",
+        "detail": "V9/immune report tests alpha in [1.5,2.5] against real clonotype data"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'wrong_alpha' outside V-AL's scope"
+        "detail": "Defect 'wrong_alpha' not in V-AL's verified scope"
       }
     },
     "D7": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -494,53 +495,53 @@
       },
       "V10-2": {
         "result": "FAIL",
-        "detail": "median_K=0.10000, CV=1.860, in_range=False, clustered=False"
+        "detail": "median_K=0.10000, CV=1.860"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V3's scope"
+        "detail": "Defect 'drake_violation' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V4's scope"
+        "detail": "Defect 'drake_violation' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V5's scope"
+        "detail": "Defect 'drake_violation' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V6's scope"
+        "detail": "Defect 'drake_violation' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V7's scope"
+        "detail": "Defect 'drake_violation' not in V7's verified scope"
       },
       "V9": {
-        "result": "DETECT",
-        "detail": "Defect 'drake_violation' is within V9's detection scope"
+        "result": "FAIL",
+        "detail": "V9/immune report: genome_operates_at_capacity VIOLATED, SHM 10^6x above Drake"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'drake_violation' outside V-AL's scope"
+        "detail": "Defect 'drake_violation' not in V-AL's verified scope"
       }
     },
     "D8": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -560,53 +561,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "FAIL",
-        "detail": "cost=0.5 kT/bp, landauer_min=1.386, margin=0.4x"
+        "detail": "cost=0.5 kT/bp, margin=0.4x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V3's scope"
+        "detail": "Defect 'landauer_violation' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V4's scope"
+        "detail": "Defect 'landauer_violation' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V5's scope"
+        "detail": "Defect 'landauer_violation' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V6's scope"
+        "detail": "Defect 'landauer_violation' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V7's scope"
+        "detail": "Defect 'landauer_violation' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V9's scope"
+        "detail": "Defect 'landauer_violation' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'landauer_violation' outside V-AL's scope"
+        "detail": "Defect 'landauer_violation' not in V-AL's verified scope"
       }
     },
     "D9": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -626,53 +627,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "FAIL",
-        "detail": "delta_BIC=-334.4, linear_preferred=False"
+        "detail": "delta_BIC=-334.4"
       },
       "V3": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V3's scope"
+        "detail": "Defect 'nonlinear_indels' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V4's scope"
+        "detail": "Defect 'nonlinear_indels' not in V4's verified scope"
       },
       "V5": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V5's scope"
+        "detail": "Defect 'nonlinear_indels' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V6's scope"
+        "detail": "Defect 'nonlinear_indels' not in V6's verified scope"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V7's scope"
+        "detail": "Defect 'nonlinear_indels' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V9's scope"
+        "detail": "Defect 'nonlinear_indels' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'nonlinear_indels' outside V-AL's scope"
+        "detail": "Defect 'nonlinear_indels' not in V-AL's verified scope"
       }
     },
     "D10": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -692,53 +693,53 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
-        "result": "DETECT",
-        "detail": "Defect 'laundering' is within V3's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'laundering' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'laundering' outside V4's scope"
+        "detail": "Defect 'laundering' not in V4's verified scope"
       },
       "V5": {
-        "result": "DETECT",
-        "detail": "Defect 'laundering' is within V5's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'laundering' not in V5's verified scope"
       },
       "V6": {
         "result": "PASS",
-        "detail": "Defect 'laundering' outside V6's scope"
+        "detail": "Defect 'laundering' not in V6's verified scope"
       },
       "V7": {
-        "result": "DETECT",
-        "detail": "Defect 'laundering' is within V7's detection scope"
+        "result": "FAIL",
+        "detail": "V7/bridge glossary: dtsMechanismIsDTS confirmed rfl, disclosed as scaffolding"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'laundering' outside V9's scope"
+        "detail": "Defect 'laundering' not in V9's verified scope"
       },
       "V-AL": {
-        "result": "DETECT",
-        "detail": "Defect 'laundering' is within V-AL's detection scope"
+        "result": "FAIL",
+        "detail": "V-AL: CONFIRMED LAUNDERING on dts_mechanism_is_dts (rfl,rfl,rfl)"
       }
     },
     "D11": {
       "V1": {
         "result": "PASS",
-        "detail": "Axiom removal causes build failure (BREAK) \u2014 load-bearing confirmed"
+        "detail": "Axiom removal causes build failure (BREAK)"
       },
       "V2": {
         "result": "PASS",
-        "detail": "Encoding round-trip verified for all reachable states"
+        "detail": "Encoding round-trip verified"
       },
       "V8-1": {
         "result": "PASS",
@@ -758,43 +759,43 @@
       },
       "V10-2": {
         "result": "PASS",
-        "detail": "median_K=0.00319, CV=0.315, in_range=True, clustered=True"
+        "detail": "median_K=0.00319, CV=0.315"
       },
       "V10-3": {
         "result": "PASS",
-        "detail": "cost=70.0 kT/bp, landauer_min=1.386, margin=50.5x"
+        "detail": "cost=70.0 kT/bp, margin=50.5x"
       },
       "V10-4": {
         "result": "PASS",
-        "detail": "delta_BIC=1.9, linear_preferred=True"
+        "detail": "delta_BIC=1.9"
       },
       "V3": {
-        "result": "DETECT",
-        "detail": "Defect 'vacuous_type' is within V3's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'vacuous_type' not in V3's verified scope"
       },
       "V4": {
         "result": "PASS",
-        "detail": "Defect 'vacuous_type' outside V4's scope"
+        "detail": "Defect 'vacuous_type' not in V4's verified scope"
       },
       "V5": {
-        "result": "DETECT",
-        "detail": "Defect 'vacuous_type' is within V5's detection scope"
+        "result": "PASS",
+        "detail": "Defect 'vacuous_type' not in V5's verified scope"
       },
       "V6": {
-        "result": "DETECT",
-        "detail": "Defect 'vacuous_type' is within V6's detection scope"
+        "result": "FAIL",
+        "detail": "V6: all 8 types audited, no degenerate instance reaches capstone vacuously"
       },
       "V7": {
         "result": "PASS",
-        "detail": "Defect 'vacuous_type' outside V7's scope"
+        "detail": "Defect 'vacuous_type' not in V7's verified scope"
       },
       "V9": {
         "result": "PASS",
-        "detail": "Defect 'vacuous_type' outside V9's scope"
+        "detail": "Defect 'vacuous_type' not in V9's verified scope"
       },
       "V-AL": {
         "result": "PASS",
-        "detail": "Defect 'vacuous_type' outside V-AL's scope"
+        "detail": "Defect 'vacuous_type' not in V-AL's verified scope"
       }
     }
   },
@@ -827,8 +828,8 @@
       "V10-2": "PASS",
       "V10-3": "PASS",
       "V10-4": "PASS",
-      "V3": "DETECT",
-      "V4": "DETECT",
+      "V3": "PASS",
+      "V4": "PASS",
       "V5": "PASS",
       "V6": "PASS",
       "V7": "PASS",
@@ -849,7 +850,7 @@
       "V4": "PASS",
       "V5": "PASS",
       "V6": "PASS",
-      "V7": "DETECT",
+      "V7": "PASS",
       "V9": "PASS",
       "V-AL": "PASS"
     },
@@ -864,7 +865,7 @@
       "V10-3": "PASS",
       "V10-4": "PASS",
       "V3": "PASS",
-      "V4": "DETECT",
+      "V4": "PASS",
       "V5": "PASS",
       "V6": "PASS",
       "V7": "PASS",
@@ -900,7 +901,7 @@
       "V10-3": "PASS",
       "V10-4": "PASS",
       "V3": "PASS",
-      "V4": "DETECT",
+      "V4": "PASS",
       "V5": "PASS",
       "V6": "PASS",
       "V7": "PASS",
@@ -919,10 +920,10 @@
       "V10-4": "PASS",
       "V3": "PASS",
       "V4": "PASS",
-      "V5": "DETECT",
+      "V5": "FAIL",
       "V6": "PASS",
-      "V7": "DETECT",
-      "V9": "DETECT",
+      "V7": "PASS",
+      "V9": "FAIL",
       "V-AL": "PASS"
     },
     "D7": {
@@ -940,7 +941,7 @@
       "V5": "PASS",
       "V6": "PASS",
       "V7": "PASS",
-      "V9": "DETECT",
+      "V9": "FAIL",
       "V-AL": "PASS"
     },
     "D8": {
@@ -989,13 +990,13 @@
       "V10-2": "PASS",
       "V10-3": "PASS",
       "V10-4": "PASS",
-      "V3": "DETECT",
+      "V3": "PASS",
       "V4": "PASS",
-      "V5": "DETECT",
+      "V5": "PASS",
       "V6": "PASS",
-      "V7": "DETECT",
+      "V7": "FAIL",
       "V9": "PASS",
-      "V-AL": "DETECT"
+      "V-AL": "FAIL"
     },
     "D11": {
       "V1": "PASS",
@@ -1007,14 +1008,22 @@
       "V10-2": "PASS",
       "V10-3": "PASS",
       "V10-4": "PASS",
-      "V3": "DETECT",
+      "V3": "PASS",
       "V4": "PASS",
-      "V5": "DETECT",
-      "V6": "DETECT",
+      "V5": "PASS",
+      "V6": "FAIL",
       "V7": "PASS",
       "V9": "PASS",
       "V-AL": "PASS"
     }
   },
-  "mismatch_details": []
+  "mismatch_details": [],
+  "verified_analysis_detections": {
+    "wrong_alpha|V5": "V5/FC9 analyzes BDIM rate conditions required for Pareto tail",
+    "wrong_alpha|V9": "V9/immune report tests alpha in [1.5,2.5] against real clonotype data",
+    "drake_violation|V9": "V9/immune report: genome_operates_at_capacity VIOLATED, SHM 10^6x above Drake",
+    "laundering|V7": "V7/bridge glossary: dtsMechanismIsDTS confirmed rfl, disclosed as scaffolding",
+    "laundering|V-AL": "V-AL: CONFIRMED LAUNDERING on dts_mechanism_is_dts (rfl,rfl,rfl)",
+    "vacuous_type|V6": "V6: all 8 types audited, no degenerate instance reaches capstone vacuously"
+  }
 }
