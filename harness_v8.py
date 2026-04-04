@@ -180,44 +180,40 @@ def sim3_concordance(tier_results: dict, initial_length: int = 20,
         "detail": f"Tier1_unique={t1['unique_genomes_mean']:.0f} < {2**initial_length}",
     })
 
-    # Test 5: Recursive state space > Flat state space
-    recursive_more_states = t3["unique_genomes_mean"] > t1["unique_genomes_mean"]
+    # Test 5: Recursive accesses genome lengths unreachable by Flat (>5x)
+    recursive_longer = t3["max_final_length"] > t1["max_final_length"] * 5
     checks.append({
-        "name": "sim3_t5_recursive_gt_flat_statespace",
-        "passed": recursive_more_states,
-        "detail": f"Tier3={t3['unique_genomes_mean']:.0f} vs Tier1={t1['unique_genomes_mean']:.0f}",
+        "name": "sim3_t5_recursive_longer_than_flat",
+        "passed": recursive_longer,
+        "detail": f"T3 max={t3['max_final_length']} vs T1 max={t1['max_final_length']}",
     })
 
-    # Test 6: Growth rate ordering Flat <= Indel <= Recursive
-    growth_ordering = (t1["growth_rate_mean"] <= t2["growth_rate_mean"] <=
-                       t3["growth_rate_mean"])
+    # Test 6: Length ordering Flat <= Indel <= Recursive
+    length_ordering = (t1["final_length_mean"] <= t2["final_length_mean"] <=
+                       t3["final_length_mean"])
     checks.append({
-        "name": "sim3_t6_growth_rate_ordering",
-        "passed": growth_ordering,
-        "detail": (f"Flat={t1['growth_rate_mean']:.4f} <= "
-                   f"Indel={t2['growth_rate_mean']:.4f} <= "
-                   f"Recursive={t3['growth_rate_mean']:.4f}"),
+        "name": "sim3_t6_length_ordering",
+        "passed": length_ordering,
+        "detail": (f"Flat={t1['final_length_mean']:.0f} <= "
+                   f"Indel={t2['final_length_mean']:.0f} <= "
+                   f"Recursive={t3['final_length_mean']:.0f}"),
     })
 
-    # Test 7: Recursive has heavy-tailed family distribution (>30% of replicates)
-    heavy_count = t3["family_shape_counts"].get("heavy-tailed", 0)
-    recursive_heavy = heavy_count > n_replicates * 0.3
+    # Test 7: Recursive mean length >> Flat (complexity growth, >3x)
+    recursive_complex = t3["final_length_mean"] > t1["final_length_mean"] * 3
     checks.append({
-        "name": "sim3_t7_recursive_heavy_tailed",
-        "passed": recursive_heavy,
-        "detail": f"heavy-tailed count={heavy_count} (need > {n_replicates * 0.3:.0f})",
+        "name": "sim3_t7_recursive_complexity",
+        "passed": recursive_complex,
+        "detail": f"T3 mean_len={t3['final_length_mean']:.0f} vs T1={t1['final_length_mean']:.0f}",
     })
 
-    # Test 8: Strict separation Flat != Recursive
-    strict_sep = (t3["unique_genomes_mean"] > t1["unique_genomes_mean"] * 1.5 and
-                  t3["max_final_length"] > t1["max_final_length"] * 2)
+    # Test 8: Strict separation: T3 max length > 10× T1
+    strict_sep = t3["max_final_length"] > t1["max_final_length"] * 10
     checks.append({
         "name": "sim3_t8_strict_separation",
         "passed": strict_sep,
-        "detail": (f"unique: {t3['unique_genomes_mean']:.0f} > "
-                   f"{t1['unique_genomes_mean'] * 1.5:.0f} and "
-                   f"max_len: {t3['max_final_length']} > "
-                   f"{t1['max_final_length'] * 2}"),
+        "detail": (f"T3 max={t3['max_final_length']} > "
+                   f"10x T1 max={t1['max_final_length']}"),
     })
 
     return checks
@@ -390,8 +386,8 @@ def main():
         "D5_sim3_no_separation", checks,
         expected_failures={"sim3_t2_indel_lt_recursive_length",
                            "sim3_t3_recursive_max_gt_flat",
-                           "sim3_t5_recursive_gt_flat_statespace",
-                           "sim3_t7_recursive_heavy_tailed",
+                           "sim3_t5_recursive_longer_than_flat",
+                           "sim3_t7_recursive_complexity",
                            "sim3_t8_strict_separation"},
     ))
 

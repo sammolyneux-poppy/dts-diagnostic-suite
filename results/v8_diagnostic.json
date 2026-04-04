@@ -111,32 +111,32 @@
           "detail": "Tier1_unique=500 < 1048576"
         },
         {
-          "name": "sim3_t5_recursive_gt_flat_statespace",
+          "name": "sim3_t5_recursive_longer_than_flat",
           "concordance_result": "PASS",
           "expected": "PASS",
           "diagnostic_ok": true,
-          "detail": "Tier3=8000 vs Tier1=500"
+          "detail": "T3 max=600 vs T1 max=20"
         },
         {
-          "name": "sim3_t6_growth_rate_ordering",
+          "name": "sim3_t6_length_ordering",
           "concordance_result": "PASS",
           "expected": "PASS",
           "diagnostic_ok": true,
-          "detail": "Flat=0.0100 <= Indel=0.1000 <= Recursive=0.5000"
+          "detail": "Flat=20 <= Indel=50 <= Recursive=200"
         },
         {
-          "name": "sim3_t7_recursive_heavy_tailed",
+          "name": "sim3_t7_recursive_complexity",
           "concordance_result": "PASS",
           "expected": "PASS",
           "diagnostic_ok": true,
-          "detail": "heavy-tailed count=40 (need > 15)"
+          "detail": "T3 mean_len=200 vs T1=20"
         },
         {
           "name": "sim3_t8_strict_separation",
           "concordance_result": "PASS",
           "expected": "PASS",
           "diagnostic_ok": true,
-          "detail": "unique: 8000 > 750 and max_len: 600 > 40"
+          "detail": "T3 max=600 > 10x T1 max=20"
         }
       ],
       "meta_pass": true
@@ -248,32 +248,32 @@
           "detail": "Tier1_unique=500 < 1048576"
         },
         {
-          "name": "sim3_t5_recursive_gt_flat_statespace",
+          "name": "sim3_t5_recursive_longer_than_flat",
           "concordance_result": "FAIL",
           "expected": "FAIL",
           "diagnostic_ok": true,
-          "detail": "Tier3=500 vs Tier1=500"
+          "detail": "T3 max=20 vs T1 max=20"
         },
         {
-          "name": "sim3_t6_growth_rate_ordering",
+          "name": "sim3_t6_length_ordering",
           "concordance_result": "PASS",
           "expected": "PASS",
           "diagnostic_ok": true,
-          "detail": "Flat=0.0100 <= Indel=0.0100 <= Recursive=0.0100"
+          "detail": "Flat=20 <= Indel=20 <= Recursive=20"
         },
         {
-          "name": "sim3_t7_recursive_heavy_tailed",
+          "name": "sim3_t7_recursive_complexity",
           "concordance_result": "FAIL",
           "expected": "FAIL",
           "diagnostic_ok": true,
-          "detail": "heavy-tailed count=0 (need > 15)"
+          "detail": "T3 mean_len=20 vs T1=20"
         },
         {
           "name": "sim3_t8_strict_separation",
           "concordance_result": "FAIL",
           "expected": "FAIL",
           "diagnostic_ok": true,
-          "detail": "unique: 500 > 750 and max_len: 20 > 40"
+          "detail": "T3 max=20 > 10x T1 max=20"
         }
       ],
       "meta_pass": true

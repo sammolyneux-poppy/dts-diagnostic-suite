@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-04T00:30:06.798301+00:00",
+  "generated": "2026-04-04T02:11:16.279951+00:00",
   "version": 2,
   "total_cells": 192,
   "total_correct": 192,
@@ -355,7 +355,7 @@
       },
       "V8-3": {
         "result": "FAIL",
-        "detail": "FAILED: sim3_t2_indel_lt_recursive_length, sim3_t3_recursive_max_gt_flat, sim3_t5_recursive_gt_flat_statespace, sim3_t7_recursive_heavy_tailed, sim3_t8_strict_separation"
+        "detail": "FAILED: sim3_t2_indel_lt_recursive_length, sim3_t3_recursive_max_gt_flat, sim3_t5_recursive_longer_than_flat, sim3_t7_recursive_complexity, sim3_t8_strict_separation"
       },
       "V10-1": {
         "result": "PASS",
