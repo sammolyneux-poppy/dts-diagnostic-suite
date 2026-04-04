@@ -1,0 +1,378 @@
+{
+  "total": 74,
+  "passed": 74,
+  "failed": 0,
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "F1.1 Combined results file exists",
+      "passed": true,
+      "detail": "Expected: /Users/sammolyneux/Projects/RGH/Golden Proof/verification_outputs/V1_axiom_independence/v1_combined_results.json"
+    },
+    {
+      "name": "F1.2 All 14 axioms tested",
+      "passed": true,
+      "detail": "Got 14 results"
+    },
+    {
+      "name": "F1.3 All axioms classified BREAK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.4 minsky_2cm_unpair_left: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/CounterMachineUniversality.lean:289:42: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 minsky_2cm_unpair_right: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/CounterMachineUniversality.lean:307:42: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 minsky_2cm_parallel: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/CounterMachineUniversality.lean:326:57: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 minsky_2cm_prec_loop: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/CounterMachineUniversality.lean:348:42: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 minsky_2cm_rfind_loop: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/CounterMachineUniversality.lean:373:42: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 cm_one_step_tag_simulation_axiom: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=6, first: error: FP4/MinskyReductionV2.lean:611:65: unexpected token '/--'; expected 'lemm..."
+    },
+    {
+      "name": "F1.4 faithful_aes_simulation: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/Undecidability.lean:286:78: unexpected token '/--'; expected 'lemma'..."
+    },
+    {
+      "name": "F1.4 encoding_bridge: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=6, first: error: FP4/Shannon/KolmogorovLean.lean:428:20: unexpected token '/--'; expected ..."
+    },
+    {
+      "name": "F1.4 genome_operates_at_capacity: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=4, first: error: FP4/Shannon/DrakeDerivation.lean:171:68: unexpected token '/--'; expected..."
+    },
+    {
+      "name": "F1.4 landauer_principle: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=4, first: error: FP4/Sufficiency/LandauerBridge.lean:109:63: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 replication_energy_measured: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=4, first: error: FP4/Sufficiency/LandauerBridge.lean:139:60: unexpected token '/--'; expec..."
+    },
+    {
+      "name": "F1.4 indelRateLinearWithTime: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=5, first: error: FP4/Tier2Exclusion/IndelBDIMAnalysis.lean:105:52: unexpected token '/--';..."
+    },
+    {
+      "name": "F1.4 indelMutation_induces_noDup_ctmc: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=3, first: error: FP4/Tier2Exclusion/IndelBDIMAnalysis.lean:64:31: unexpected token '/--'; ..."
+    },
+    {
+      "name": "F1.4 recursiveMutation_induces_balanced_rates: has real Lean error messages",
+      "passed": true,
+      "detail": "error_count=3, first: error: FP4/FractalGenesis/GeneFamilyProcess.lean:319:65: unexpected token '/--';..."
+    },
+    {
+      "name": "F1.5 minsky_2cm_unpair_left: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 minsky_2cm_unpair_right: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 minsky_2cm_parallel: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 minsky_2cm_prec_loop: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 minsky_2cm_rfind_loop: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 cm_one_step_tag_simulation_axiom: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 faithful_aes_simulation: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 encoding_bridge: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 genome_operates_at_capacity: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 landauer_principle: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 replication_energy_measured: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 indelRateLinearWithTime: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 indelMutation_induces_noDup_ctmc: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F1.5 recursiveMutation_induces_balanced_rates: individual JSON exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F2.1 Machine 1 trace report exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F2.2 Machine 1 has step-by-step trace",
+      "passed": true,
+      "detail": "steps=True, genome=True"
+    },
+    {
+      "name": "F2.3 Machine 1 has match verification",
+      "passed": true,
+      "detail": "Report contains MATCH/PASS verification"
+    },
+    {
+      "name": "F2.1 Machine 2 trace report exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F2.2 Machine 2 has step-by-step trace",
+      "passed": true,
+      "detail": "steps=True, genome=True"
+    },
+    {
+      "name": "F2.3 Machine 2 has match verification",
+      "passed": true,
+      "detail": "Report contains MATCH/PASS verification"
+    },
+    {
+      "name": "F2.1 Machine 3 trace report exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "F2.2 Machine 3 has step-by-step trace",
+      "passed": true,
+      "detail": "steps=True, genome=True"
+    },
+    {
+      "name": "F2.3 Machine 3 has match verification",
+      "passed": true,
+      "detail": "Report contains MATCH/PASS verification"
+    },
+    {
+      "name": "F2.4 Python script has Lean-isomorphic structures",
+      "passed": true,
+      "detail": "Genome=True, Tag=True, encode/decode=True, AES=True"
+    },
+    {
+      "name": "F2.5 Lean cross-check template created",
+      "passed": true,
+      "detail": "Template at diagnostics/v2_lean_crosscheck.lean \u2014 manual execution required"
+    },
+    {
+      "name": "F3.1 D1: Axiom block found at correct lines",
+      "passed": true,
+      "detail": "start=2, end=4 (0-indexed)"
+    },
+    {
+      "name": "F3.2 D1: Axiom correctly commented out",
+      "passed": true,
+      "detail": "No uncommented axiom line remains"
+    },
+    {
+      "name": "F3.3 D1: Restore recovers original",
+      "passed": true,
+      "detail": "Round-trip: comment-out then restore = original"
+    },
+    {
+      "name": "F3.4 D2: Correct system (D0) passes all V2 checks",
+      "passed": true,
+      "detail": "5 / 5 checks passed"
+    },
+    {
+      "name": "F3.5 D2: Non-injective encoding detected by V2",
+      "passed": true,
+      "detail": "D2 diagnostic: [{'label': 'TagEncoding rejects non-injective map', 'passed': True, 'detail': ''}, {'label': 'Bit-flip detected (AES returned None)', 'passed': True, 'detail': ''}]"
+    },
+    {
+      "name": "F3.6 D2b: Lossy encoding detected by V2",
+      "passed": true,
+      "detail": "D2b diagnostic: [{'label': 'Dropped bit detected (genome mismatch)', 'passed': True, 'detail': 'head_sym=a'}]"
+    },
+    {
+      "name": "F4: V-AL detects laundering",
+      "passed": true,
+      "detail": "Matched 3/3 patterns: ['CONFIRMED LAUNDERING', 'rfl.*rfl.*rfl', 'dts_mechanism']"
+    },
+    {
+      "name": "F4: V6 audits type inhabitants",
+      "passed": true,
+      "detail": "Matched 2/2 patterns: ['degenerate.*instance.*capstone|No.*degen', 'vacuous']"
+    },
+    {
+      "name": "F4: V7 audits dtsMechanismIsDTS as rfl",
+      "passed": true,
+      "detail": "Matched 3/3 patterns: ['dtsMechanismIsDTS|dts_mechanism_is_dts', 'rfl.*rfl.*rfl|definitional', 'scaffolding|ORGANIZATIONAL']"
+    },
+    {
+      "name": "F4: V5/FC9 analyzes BDIM rate conditions",
+      "passed": true,
+      "detail": "Matched 2/2 patterns: ['rate conditions.*load-bearing|specific r', 'balanced.*insufficient|BDIM.*essential']"
+    },
+    {
+      "name": "F4: V9 detects Drake violation in immune domain",
+      "passed": true,
+      "detail": "Matched 2/2 patterns: ['VIOLATED.*capacity|capacity.*VIOLATED', '10.*[\u20766].*higher|vastly exceed']"
+    },
+    {
+      "name": "F4: V9 tests alpha range against real data",
+      "passed": true,
+      "detail": "Matched 1/1 patterns: ['\u03b1.*[\u2208\\\\[].*1\\\\.5.*2\\\\.5|alpha.*1\\\\.5.*2\\\\.5']"
+    },
+    {
+      "name": "F5.1 Flat mutation preserves genome length",
+      "passed": true,
+      "detail": "All lengths = 20: {20}"
+    },
+    {
+      "name": "F5.2 Recursive mutation grows genome length",
+      "passed": true,
+      "detail": "max_length = 1000"
+    },
+    {
+      "name": "F5.3 Recursive accesses genome lengths unreachable by Flat",
+      "passed": true,
+      "detail": "Recursive max_len=1000, Flat max_len=20"
+    },
+    {
+      "name": "F5.4 Phase transition: dup=0.5 grows genome, dup=0.0 does not",
+      "passed": true,
+      "detail": "dup=0.0 max_len=20, dup=0.5 max_len=1000"
+    },
+    {
+      "name": "F5.5 BDIM produces families with size > 5",
+      "passed": true,
+      "detail": "max_family_size = 15, n_families = 642"
+    },
+    {
+      "name": "F5.6 BDIM produces multiple large families",
+      "passed": true,
+      "detail": "181 families with size > 3"
+    },
+    {
+      "name": "F6.1 Bacteriophage \u03bb: \u03bc in published range",
+      "passed": true,
+      "detail": "\u03bc=7.70e-08, expected (5e-08, 1e-07)"
+    },
+    {
+      "name": "F6.2 Bacteriophage \u03bb: G in published range",
+      "passed": true,
+      "detail": "G=4.85e+04, expected (45000.0, 50000.0)"
+    },
+    {
+      "name": "F6.3 Bacteriophage \u03bb: K in published range",
+      "passed": true,
+      "detail": "K=0.0037, expected (0.002, 0.006)"
+    },
+    {
+      "name": "F6.1 E. coli: \u03bc in published range",
+      "passed": true,
+      "detail": "\u03bc=5.40e-10, expected (2e-10, 1e-09)"
+    },
+    {
+      "name": "F6.2 E. coli: G in published range",
+      "passed": true,
+      "detail": "G=4.64e+06, expected (4500000.0, 4800000.0)"
+    },
+    {
+      "name": "F6.3 E. coli: K in published range",
+      "passed": true,
+      "detail": "K=0.0025, expected (0.001, 0.005)"
+    },
+    {
+      "name": "F6.1 S. cerevisiae: \u03bc in published range",
+      "passed": true,
+      "detail": "\u03bc=3.30e-10, expected (1e-10, 5e-10)"
+    },
+    {
+      "name": "F6.2 S. cerevisiae: G in published range",
+      "passed": true,
+      "detail": "G=1.20e+07, expected (11000000.0, 13000000.0)"
+    },
+    {
+      "name": "F6.3 S. cerevisiae: K in published range",
+      "passed": true,
+      "detail": "K=0.0040, expected (0.002, 0.006)"
+    },
+    {
+      "name": "F6.4 Landauer minimum: ~2.97e-21 J per bit at 310K",
+      "passed": true,
+      "detail": "landauer_per_bit = 2.968e-21 J"
+    },
+    {
+      "name": "F6.5 ATP energy: ~20 kT per hydrolysis",
+      "passed": true,
+      "detail": "ATP = 19.4 kT"
+    },
+    {
+      "name": "F6.6 Landauer margin in [30, 100] range",
+      "passed": true,
+      "detail": "margin = 50.4\u00d7 (total=70 kT/bp, min=1.386 kT/bp)"
+    },
+    {
+      "name": "F6.7 Denver indel data: R\u00b2 > 0.99 (highly linear)",
+      "passed": true,
+      "detail": "R\u00b2 = 0.9994, slope = 0.00388"
+    },
+    {
+      "name": "F6.8 Denver indel data: slope \u2248 0.004 indels/line/Mb/gen",
+      "passed": true,
+      "detail": "slope = 0.00388"
+    }
+  ]
+}
